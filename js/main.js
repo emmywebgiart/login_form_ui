@@ -28,8 +28,8 @@ const login = async () => {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                username: username.value, // kminchelle
-                password: password.value, // 0lelplR
+                username: username.value.trim(), // kminchelle
+                password: password.value.trim(), // 0lelplR
             })
         })
         const data = await response.json()
