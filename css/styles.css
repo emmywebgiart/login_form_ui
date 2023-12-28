@@ -5,6 +5,7 @@
     --colorp2: #00c299;
     --colorp3: #121418;
     --colorwhite: #fff;
+    --colorp3rgb: 18 20 24;
 }
 
 * {
@@ -208,7 +209,7 @@ a {
 }
 
 .button_primary:before {
-    background-color: rgba(18, 20, 24, 0.9);
+    background-color: rgb(var(--colorp3rgb) / 90%);
     border-radius: 12px;
     content: '';
     height: 100%;
