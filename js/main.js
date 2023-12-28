@@ -1,6 +1,6 @@
 let buttonPassword = document.getElementById('button_password')
 let userPassword = document.getElementById('user_password')
-let iconButtonPassword =document.querySelector('#button_password i')
+let iconButtonPassword = document.querySelector('#button_password i')
 let loginForm = document.getElementById('login_form')
 let username = document.getElementById('username')
 let password = document.getElementById('user_password')
@@ -28,12 +28,13 @@ const login = async () => {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                username: username.value.trim(), // kminchelle
-                password: password.value.trim(), // 0lelplR
+                username: username.value.trim(), //kminchelle
+                password: password.value.trim(), //0lelplR
             })
         })
+
         const data = await response.json()
-    
+
         if(data.message === 'Invalid credentials') {
             alert('No se ha encontrado el usuario')
             cleanForm()
@@ -48,6 +49,7 @@ const login = async () => {
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault()
+
     if(username.value.trim() === '' || password.value.trim() === '') {
         alert('No has ingresado los datos solicitados')
         cleanForm()

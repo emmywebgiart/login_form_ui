@@ -5,6 +5,7 @@
     --colorp2: #00c299;
     --colorp3: #121418;
     --colorwhite: #fff;
+    --colorp3rgb: 18 20 24;
 }
 
 * {
@@ -65,7 +66,7 @@ a {
 }
 
 .login_container {
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     height: 100%;
 }
@@ -75,21 +76,6 @@ a {
     background-position: center center;
     background-size: cover;
     position: relative;
-}
-
-.login_image {
-    height: 100%;
-    position: absolute;
-    width: 100%;
-}
-
-.login_image img {
-    height: 100%;
-    left: 0;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    width: 100%;
 }
 
 .login_brand img {
@@ -104,26 +90,26 @@ a {
 
 .form_container {
     max-width: 479px;
-    width: 100%; 
+    width: 100%;
 }
 
 .form_title {
-    color: var(--colorwhite); 
-    font-size: 4rem; 
+    color: var(--colorwhite);
+    font-size: 4rem;
     margin-bottom: 32px;
 }
 
 .form_content {
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     row-gap: 16px;
 }
 
 .input_container {
-    background-image: linear-gradient(to right, var(--colorp2), var(--colorp1)); 
+    background-image: linear-gradient(to right, var(--colorp2), var(--colorp1));
     border-radius: 12px;
     overflow: hidden;
-    padding: 2px; 
+    padding: 2px;
     position: relative;
 }
 
@@ -138,10 +124,10 @@ a {
 
 .input_textfield {
     background: transparent;
-    border-radius: 12px; 
-    padding: 24px 16px; 
+    border-radius: 12px;
+    padding: 24px 16px;
     position: relative;
-    width: 100%; 
+    width: 100%;
     z-index: 1;
 }
 
@@ -149,24 +135,23 @@ a {
     opacity: 0;
 }
 
-
 .input_textfield:focus::placeholder {
     opacity: 1;
 }
 
 .input_label {
     color: var(--colorwhite);
-    left: 15px; 
-    position: absolute; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    transition: .3s ease-in;
+    left: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s ease-in;
 }
 
 .input_textfield:focus ~ .input_label,
 .input_textfield:not(:placeholder-shown) ~ .input_label {
     left: -50%;
-    opacity: .01;
+    opacity: 0.01;
     transform: translate(-50%, -50%) scale(10);
 }
 
@@ -175,10 +160,10 @@ a {
     display: grid;
     height: 32px;
     place-items: center;
-    position: absolute; 
-    right: 16px; 
-    top: 50%; 
-    transform: translateY(-50%); 
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 32px;
     z-index: 1;
 }
@@ -208,7 +193,7 @@ a {
 }
 
 .button_primary:before {
-    background-color: rgba(18, 20, 24, 0.9);
+    background-color: rgb(var(--colorp3rgb) / 90%);
     border-radius: 12px;
     content: '';
     height: 100%;
@@ -240,8 +225,8 @@ a {
     }
 
     .login_image_container:before {
-        content: '';
         background-image: linear-gradient(to top, var(--colorp3), transparent);
+        content: '';
         height: 100%;
         position: absolute;
         width: 100%;
@@ -254,7 +239,7 @@ a {
     }
 
     .login_brand img {
-        width: 40px;
+        width: 32px;
     }
 
     .login_form_content {
